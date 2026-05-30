@@ -1,70 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Para Biel ❤️</title>
 
-<style>
+<link rel="stylesheet" href="style.css">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family: Arial, sans-serif;
-background: linear-gradient(135deg,#0f172a,#1e293b);
-color:white;
-overflow:hidden;
-}
-
-section{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:30px;
-text-align:center;
-}
-
-.container{
-max-width:800px;
-}
-
-h1{
-font-size:3rem;
-margin-bottom:20px;
-}
-
-p{
-font-size:1.2rem;
-line-height:1.8;
-margin-bottom:25px;
-}
-
-button{
-background:#ff4d8d;
-border:none;
-padding:15px 30px;
-border-radius:30px;
-font-size:1rem;
-color:white;
-cursor:pointer;
-}
-
-.hidden{
-display:none;
-}
-
-</style>
 </head>
 
 <body>
 
-<section id="tela1">
+<section class="hero">
 
 <div class="container">
 
@@ -72,93 +21,177 @@ display:none;
 
 <p>
 Algumas histórias começam de repente.
-<br><br>
+<br>
 A nossa começou muito antes de nós imaginarmos.
 </p>
 
-<button onclick="proximaTela()">
+<a href="#historia" class="botao">
 Entrar
-</button>
+</a>
 
 </div>
 
 </section>
 
-<section id="tela2" class="hidden">
+<section id="historia">
 
 <div class="container">
 
-<h1>Você se lembra de 2019?</h1>
+<h2>Você se lembra de 2019?</h2>
+
+<div class="card">
 
 <p>
-Talvez não.
-<br><br>
-Mas eu me lembro.
-<br><br>
+Eu me lembro.
+</p>
+
+<p>
 Naquela época nossos caminhos se cruzaram por um instante.
-<br>
-E depois seguiram direções diferentes.
-<br><br>
-Sem saber que alguns anos depois...
-<br>
-a vida nos colocaria frente a frente novamente.
 </p>
 
-<button onclick="mostrarHistoria()">
-Continuar ❤️
-</button>
+<p>
+Depois seguiram direções diferentes.
+</p>
+
+<p>
+Sem saber que alguns anos depois a vida nos colocaria frente a frente novamente.
+</p>
+
+<p>
+E dessa vez deu certo. ❤️
+</p>
+
+</div>
 
 </div>
 
 </section>
 
-<section id="tela3" class="hidden">
+<section>
 
 <div class="container">
 
-<h1>Nossa História ❤️</h1>
+<h2>Desde 19 de junho de 2025 ❤️</h2>
 
-<p>
-Tudo começou oficialmente em
-<b>19 de junho de 2025</b>.
-</p>
-
-<p id="contador"></p>
+<div id="contador" class="contador"></div>
 
 </div>
 
 </section>
 
-<script>
+<section>
 
-function proximaTela(){
-document.getElementById("tela1").classList.add("hidden");
-document.getElementById("tela2").classList.remove("hidden");
-}
+<div class="container">
 
-function mostrarHistoria(){
-document.getElementById("tela2").classList.add("hidden");
-document.getElementById("tela3").classList.remove("hidden");
-}
+<h2>Nossas Memórias 📸</h2>
 
-const inicio = new Date("2025-06-19T00:00:00");
+<div class="galeria">
 
-function atualizarContador(){
+<img src="imagens/capa.jpg">
 
-const agora = new Date();
+<img src="imagens/biel.jpg">
 
-const diferenca = agora - inicio;
+<img src="imagens/aventura.jpg">
 
-const dias = Math.floor(diferenca / (1000*60*60*24));
+</div>
 
-document.getElementById("contador").innerHTML =
-"Estamos juntos há <br><br><b>" + dias + " dias ❤️</b>";
+</div>
 
-}
+</section>
 
-setInterval(atualizarContador,1000);
+<section>
 
-</script>
+<div class="container">
+
+<h2>Nossas Aventuras ✈️</h2>
+
+<div class="card">
+
+<p>
+Nossa primeira viagem juntos também veio com alguns desafios.
+</p>
+
+<p>
+O primeiro hotel que escolhemos não era exatamente o que imaginávamos...
+</p>
+
+<p>
+Mas olhando para trás, uma das melhores partes da viagem foi justamente passar por tudo aquilo ao seu lado.
+</p>
+
+<p>
+Porque até os perrengues ficam mais leves quando estou com você. ❤️
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2>Uma carta para você 💌</h2>
+
+<div class="carta">
+
+<p>
+Meu bem,
+</p>
+
+<br>
+
+<p>
+Eu não imaginava que reencontrar você mudaria tanto a minha vida.
+</p>
+
+<p>
+Hoje eu não consigo imaginar meus dias sem as nossas conversas, nossas risadas e os nossos momentos juntos.
+</p>
+
+<p>
+Obrigado por cada abraço, cada viagem e cada memória que construímos.
+</p>
+
+<p>
+Você transformou momentos comuns em lembranças que eu quero guardar para sempre.
+</p>
+
+<p>
+Eu amo você. ❤️
+</p>
+
+<br>
+
+<p>
+Com amor,
+</p>
+
+<p>
+Seu namorado lindo ❤️
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="final">
+
+<h2>Se eu pudesse escolher novamente...</h2>
+
+<p>
+Eu escolheria você.
+<br>
+Todas as vezes.
+</p>
+
+</section>
+
+<script src="script.js"></script>
 
 </body>
 </html>
