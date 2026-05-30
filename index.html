@@ -18,16 +18,20 @@ body{
 font-family: Arial, sans-serif;
 background: linear-gradient(135deg,#0f172a,#1e293b);
 color:white;
+overflow:hidden;
+}
+
+section{
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
+padding:30px;
 text-align:center;
-padding:20px;
 }
 
 .container{
-max-width:700px;
+max-width:800px;
 }
 
 h1{
@@ -38,7 +42,7 @@ margin-bottom:20px;
 p{
 font-size:1.2rem;
 line-height:1.8;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
 button{
@@ -49,33 +53,112 @@ border-radius:30px;
 font-size:1rem;
 color:white;
 cursor:pointer;
-transition:.3s;
 }
 
-button:hover{
-transform:scale(1.05);
+.hidden{
+display:none;
 }
 
 </style>
-
 </head>
 
 <body>
+
+<section id="tela1">
 
 <div class="container">
 
 <h1>Para Biel ❤️</h1>
 
 <p>
-Algumas histórias começam de repente.<br>
+Algumas histórias começam de repente.
+<br><br>
 A nossa começou muito antes de nós imaginarmos.
 </p>
 
-<button onclick="alert('Bem-vindo à nossa história ❤️')">
+<button onclick="proximaTela()">
 Entrar
 </button>
 
 </div>
+
+</section>
+
+<section id="tela2" class="hidden">
+
+<div class="container">
+
+<h1>Você se lembra de 2019?</h1>
+
+<p>
+Talvez não.
+<br><br>
+Mas eu me lembro.
+<br><br>
+Naquela época nossos caminhos se cruzaram por um instante.
+<br>
+E depois seguiram direções diferentes.
+<br><br>
+Sem saber que alguns anos depois...
+<br>
+a vida nos colocaria frente a frente novamente.
+</p>
+
+<button onclick="mostrarHistoria()">
+Continuar ❤️
+</button>
+
+</div>
+
+</section>
+
+<section id="tela3" class="hidden">
+
+<div class="container">
+
+<h1>Nossa História ❤️</h1>
+
+<p>
+Tudo começou oficialmente em
+<b>19 de junho de 2025</b>.
+</p>
+
+<p id="contador"></p>
+
+</div>
+
+</section>
+
+<script>
+
+function proximaTela(){
+document.getElementById("tela1").classList.add("hidden");
+document.getElementById("tela2").classList.remove("hidden");
+}
+
+function mostrarHistoria(){
+document.getElementById("tela2").classList.add("hidden");
+document.getElementById("tela3").classList.remove("hidden");
+}
+
+const inicio = new Date("2025-06-19T00:00:00");
+
+function atualizarContador(){
+
+const agora = new Date();
+
+const diferenca = agora - inicio;
+
+const dias = Math.floor(diferenca / (1000*60*60*24));
+
+document.getElementById("contador").innerHTML =
+"Estamos juntos há <br><br><b>" + dias + " dias ❤️</b>";
+
+}
+
+setInterval(atualizarContador,1000);
+
+</script>
 
 </body>
 </html>
