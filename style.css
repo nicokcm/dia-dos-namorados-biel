@@ -125,3 +125,24 @@ opacity:0;
 }
 
 }
+
+.contador-grid{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.contador-grid div{
+background:#1e293b;
+padding:15px;
+border-radius:15px;
+min-width:90px;
+}
+
+.contador-grid strong{
+font-size:2rem;
+display:block;
+color:#ff8db8;
+}
