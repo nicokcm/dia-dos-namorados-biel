@@ -1,5 +1,3 @@
-alert("JavaScript funcionando!");
-
 const inicio = new Date("2025-06-19T00:00:00");
 
 function atualizarContador() {
