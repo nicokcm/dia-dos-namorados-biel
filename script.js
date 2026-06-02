@@ -1,47 +1,74 @@
 const inicio = new Date("2025-06-19T00:00:00");
 
-function atualizarContador(){
+function atualizarContador() {
 
-const agora = new Date();
+    const agora = new Date();
 
-const diferenca = agora - inicio;
+    const diferenca = agora - inicio;
 
-const dias = Math.floor(diferenca / (1000*60*60*24));
+    const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
 
-const contador = document.getElementById("contador");
+    const horas = Math.floor(
+        (diferenca % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+    );
 
-if(contador){
-contador.innerHTML = dias + " dias ❤️";
+    const minutos = Math.floor(
+        (diferenca % (1000 * 60 * 60)) /
+        (1000 * 60)
+    );
+
+    const segundos = Math.floor(
+        (diferenca % (1000 * 60)) /
+        1000
+    );
+
+    const contador = document.getElementById("contador");
+
+    if (contador) {
+
+        contador.innerHTML = `
+            ${dias} dias<br>
+            ${horas} horas<br>
+            ${minutos} minutos<br>
+            ${segundos} segundos<br><br>
+            ❤️
+        `;
+
+    }
+
 }
 
-}
-
-setInterval(atualizarContador,1000);
+setInterval(atualizarContador, 1000);
 
 atualizarContador();
 
-function escolherVoce(){
+function escolherVoce() {
 
-document.getElementById("mensagemFinal").style.display = "block";
+    const mensagem = document.getElementById("mensagemFinal");
 
-for(let i=0;i<40;i++){
+    if (mensagem) {
+        mensagem.style.display = "block";
+    }
 
-const coracao = document.createElement("div");
+    for (let i = 0; i < 40; i++) {
 
-coracao.innerHTML = "❤️";
+        const coracao = document.createElement("div");
 
-coracao.classList.add("coracao");
+        coracao.innerHTML = "❤️";
 
-coracao.style.left = Math.random() * 100 + "vw";
+        coracao.className = "coracao";
 
-coracao.style.bottom = "-20px";
+        coracao.style.left = Math.random() * 100 + "vw";
 
-document.body.appendChild(coracao);
+        coracao.style.bottom = "-50px";
 
-setTimeout(()=>{
-coracao.remove();
-},4000);
+        document.body.appendChild(coracao);
 
-}
+        setTimeout(() => {
+            coracao.remove();
+        }, 4000);
+
+    }
 
 }
