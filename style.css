@@ -16,7 +16,11 @@ line-height:1.7;
 }
 
 section{
-padding:80px 20px;
+min-height:100vh;
+padding:40px 20px;
+display:flex;
+justify-content:center;
+align-items:center;
 text-align:center;
 }
 
