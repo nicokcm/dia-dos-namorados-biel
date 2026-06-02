@@ -30,12 +30,13 @@ function atualizarContador() {
     if (contador) {
 
         contador.innerHTML = `
-            ${dias} dias<br>
-            ${horas} horas<br>
-            ${minutos} minutos<br>
-            ${segundos} segundos<br><br>
-            ❤️
-        `;
+<div class="contador-grid">
+    <div><strong>${dias}</strong><br>Dias</div>
+    <div><strong>${horas}</strong><br>Horas</div>
+    <div><strong>${minutos}</strong><br>Minutos</div>
+    <div><strong>${segundos}</strong><br>Segundos</div>
+</div>
+`;
 
     }
 
