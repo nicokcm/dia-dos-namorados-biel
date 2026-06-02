@@ -54,7 +54,7 @@ function escolherVoce() {
         mensagem.style.display = "block";
     }
 
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 80; i++) {
 
         const coracao = document.createElement("div");
 
@@ -64,13 +64,19 @@ function escolherVoce() {
 
         coracao.style.left = Math.random() * 100 + "vw";
 
-        coracao.style.bottom = "-50px";
+        coracao.style.bottom = (Math.random() * 200 - 100) + "px";
+
+        coracao.style.fontSize =
+            (Math.random() * 25 + 15) + "px";
+
+        coracao.style.animationDuration =
+            (Math.random() * 3 + 2) + "s";
 
         document.body.appendChild(coracao);
 
         setTimeout(() => {
             coracao.remove();
-        }, 4000);
+        }, 5000);
 
     }
 
