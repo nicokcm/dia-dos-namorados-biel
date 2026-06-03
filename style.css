@@ -155,3 +155,20 @@ font-size:2rem;
 display:block;
 color:#ff8db8;
 }
+
+.timeline{
+max-width:600px;
+margin:40px auto;
+}
+
+.timeline-item{
+background:#1e293b;
+padding:20px;
+border-radius:20px;
+margin:20px 0;
+}
+
+.timeline-item h3{
+color:#ff8db8;
+margin-bottom:10px;
+}
