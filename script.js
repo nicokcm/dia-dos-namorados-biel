@@ -50,6 +50,13 @@ function escolherVoce() {
 
     if (mensagem) {
         mensagem.style.display = "block";
+
+        setTimeout(() => {
+            mensagem.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }, 100);
     }
 
     for (let i = 0; i < 80; i++) {
@@ -62,7 +69,8 @@ function escolherVoce() {
 
         coracao.style.left = Math.random() * 100 + "vw";
 
-        coracao.style.bottom = (Math.random() * 200 - 100) + "px";
+        coracao.style.bottom =
+            (Math.random() * 200 - 100) + "px";
 
         coracao.style.fontSize =
             (Math.random() * 25 + 15) + "px";
