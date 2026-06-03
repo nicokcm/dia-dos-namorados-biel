@@ -13,6 +13,8 @@ font-family: Arial, sans-serif;
 background:#0f172a;
 color:white;
 line-height:1.7;
+overflow-y:scroll;
+scroll-snap-type:y mandatory;
 }
 
 section{
@@ -22,6 +24,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
+scroll-snap-align:start;
 }
 
 .container{
