@@ -87,3 +87,28 @@ function escolherVoce() {
     }
 
 }
+
+const imagens = document.querySelectorAll(".galeria img");
+
+const modal = document.getElementById("fotoModal");
+
+const fotoExpandida =
+    document.getElementById("fotoExpandida");
+
+imagens.forEach(img => {
+
+    img.addEventListener("click", () => {
+
+        fotoExpandida.src = img.src;
+
+        modal.classList.add("ativo");
+
+    });
+
+});
+
+modal.addEventListener("click", () => {
+
+    modal.classList.remove("ativo");
+
+});
