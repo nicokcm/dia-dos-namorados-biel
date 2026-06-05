@@ -112,3 +112,25 @@ modal.addEventListener("click", () => {
     modal.classList.remove("ativo");
 
 });
+
+const elementos = document.querySelectorAll(".aparecer");
+
+const observador = new IntersectionObserver((entradas) => {
+
+    entradas.forEach(entrada => {
+
+        if (entrada.isIntersecting) {
+
+            entrada.target.classList.add("visivel");
+
+        }
+
+    });
+
+});
+
+elementos.forEach(el => {
+
+    observador.observe(el);
+
+});
