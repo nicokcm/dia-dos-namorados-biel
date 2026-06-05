@@ -113,8 +113,6 @@ modal.addEventListener("click", () => {
 
 });
 
-const elementos = document.querySelectorAll(".aparecer");
-
 const observador = new IntersectionObserver((entradas) => {
 
     entradas.forEach(entrada => {
