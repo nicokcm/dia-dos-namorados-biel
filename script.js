@@ -113,7 +113,7 @@ modal.addEventListener("click", () => {
 
 });
 
-const observador = new IntersectionObserver((entradas) => {
+/*const observador = new IntersectionObserver((entradas) => {
 
     entradas.forEach(entrada => {
 
@@ -132,3 +132,4 @@ elementos.forEach(el => {
     observador.observe(el);
 
 });
+*/
