@@ -265,32 +265,49 @@ height:100%;
 
 background-image:
 
-radial-gradient(white 1px, transparent 1px),
+radial-gradient(white 1.5px, transparent 1.5px),
 
-radial-gradient(rgba(255,255,255,.7) 1px, transparent 1px),
+radial-gradient(rgba(255,255,255,.8) 1px, transparent 1px),
 
-radial-gradient(rgba(255,255,255,.5) 1px, transparent 1px);
+radial-gradient(rgba(255,182,193,.8) 1px, transparent 1px),
+
+radial-gradient(rgba(255,255,255,.6) 2px, transparent 2px);
 
 background-size:
 
+80px 80px,
+
+130px 130px,
+
 180px 180px,
 
-260px 260px,
-
-340px 340px;
+250px 250px;
 
 background-position:
 
 0 0,
 
-50px 80px,
+50px 70px,
 
-120px 40px;
+120px 40px,
+
+180px 120px;
+
+opacity:.7;
 
 pointer-events:none;
 
-opacity:.25;
-
 z-index:-1;
+
+}
+
+@media (max-width:768px){
+
+.hero{
+
+background-position:center 10%;
+background-size:cover;
+
+}
 
 }
