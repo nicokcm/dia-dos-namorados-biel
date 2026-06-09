@@ -283,28 +283,28 @@ radial-gradient(rgba(255,255,255,.7) 2px, transparent 2px);
 
 background-size:
 
-73px 73px,
+79px 79px,
 
-127px 127px,
+143px 143px,
 
-211px 211px,
+237px 237px,
 
-319px 319px;
+391px 391px;
 
 background-position:
 
-13px 21px,
+17px 39px,
 
-67px 94px,
+91px 126px,
 
-181px 42px,
+223px 58px,
 
-302px 118px;
+347px 177px;
 
 opacity:.9;
 
-animation:cintilar1 6s ease-in-out infinite;
-
+animation:cintilar1 2.5s ease-in-out infinite alternate;
+  
 }
 
 /* Estrelas grandes */
@@ -337,7 +337,7 @@ background-position:
 
 opacity:.7;
 
-animation:cintilar2 9s ease-in-out infinite;
+animation:cintilar2 4s ease-in-out infinite alternate;
 
 }
 
@@ -346,33 +346,27 @@ animation:cintilar2 9s ease-in-out infinite;
 @keyframes cintilar1{
 
 0%{
-
-opacity:.4;
-
+opacity:.2;
 }
 
-25%{
-
-opacity:.8;
-
-}
-
-50%{
-
+20%{
 opacity:1;
-
 }
 
-75%{
+40%{
+opacity:.4;
+}
 
-opacity:.7;
+60%{
+opacity:.9;
+}
 
+80%{
+opacity:.3;
 }
 
 100%{
-
-opacity:.4;
-
+opacity:1;
 }
 
 }
@@ -380,30 +374,32 @@ opacity:.4;
 @keyframes cintilar2{
 
 0%{
-
-opacity:.9;
-
+opacity:1;
 transform:scale(1);
+}
 
+25%{
+opacity:.4;
+transform:scale(1.05);
 }
 
 50%{
+opacity:.9;
+transform:scale(1);
+}
 
-opacity:.3;
-
-transform:scale(1.02);
-
+75%{
+opacity:.2;
+transform:scale(1.08);
 }
 
 100%{
-
-opacity:.9;
-
+opacity:1;
 transform:scale(1);
-
 }
 
 }
+
 @media (max-width:768px){
 
 .hero{
