@@ -284,19 +284,19 @@ radial-gradient(rgba(255,182,193,.8) 1px, transparent 1px);
 
 background-size:
 
-60px 60px,
+73px 73px,
 
-100px 100px,
+127px 127px,
 
-160px 160px;
+211px 211px;
 
 background-position:
 
-0 0,
+13px 21px,
 
-50px 80px,
+67px 94px,
 
-120px 40px;
+181px 42px;
 
 animation:cintilar1 5s infinite alternate;
 
@@ -314,15 +314,15 @@ radial-gradient(rgba(255,255,255,.7) 1px, transparent 1px);
 
 background-size:
 
-140px 140px,
+157px 157px,
 
-220px 220px;
+287px 287px;
 
 background-position:
 
-80px 30px,
+41px 63px,
 
-180px 150px;
+203px 171px;
 
 animation:cintilar2 7s infinite alternate;
 
