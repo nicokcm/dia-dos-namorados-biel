@@ -42,8 +42,8 @@ background:
 linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
 url("imagens/capa1.jpg");
 background-size:cover;
-background-attachment:fixed;
 background-position:center 25%;
+background-repeat:no-repeat;
 }
 
 .hero h1{
