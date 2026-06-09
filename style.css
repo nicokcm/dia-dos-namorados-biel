@@ -206,12 +206,3 @@ border-radius:20px;
 display:flex;
 }
 
-.aparecer{
-opacity:1;
-transform:none;
-}
-
-.aparecer.visivel{
-opacity:1;
-transform:translateY(0);
-}
